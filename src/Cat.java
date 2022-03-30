@@ -27,35 +27,14 @@ public class Cat
         weight = weight + amount;
     }
 
-
     public void drink(Double amount)
     {
         weight = weight + amount;
     }
 
-    public void poop()
-    {
-        weight = weight - weight/200;
-        System.out.println("Уберите за кошкой!");
-    }
-
     public Double getWeight()
     {
         return weight;
-    }
-
-    public double feedWeight()
-    {
-        if (getWeight() > originWeight)
-        {
-           double feedWeight;
-           feedWeight = getWeight() - originWeight;
-           return feedWeight;
-        }
-        else
-        {
-           return 0.0;
-        }
     }
 
     public String getStatus()
