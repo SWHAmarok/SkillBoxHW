@@ -36,5 +36,10 @@ public class Loader
             mushka.meow();
         }
         System.out.println("Статус Мушки: " + mushka.getStatus());
+
+        // Проверим метод drink
+
+        ryzhik.drink(50.0);
+        System.out.println("Рыжик попил и теперь весит " + ryzhik.getWeight() + " граммов.");
     }
 }
