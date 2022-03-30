@@ -1,8 +1,8 @@
+import java.util.Objects;
 
 public class Loader
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // Создаём 7 новых кошек с использованием класса Cat: Cat переменная = new Cat();
         Cat murka = new Cat(); // Создаём кошку Мурку
         Cat barsik = new Cat(); // Создаём кота Барсика
@@ -26,13 +26,13 @@ public class Loader
         System.out.println("Вес Барсика после кормления стал: " + barsik.getWeight()); // Выводим на консоль вес Барсика после кормления
 
         // Перекормить кошку до взрыва
-        while (pushok.getStatus() != "Exploded") {
+        while (!pushok.getStatus().equals("Exploded")) {
             pushok.feed(pushok.getWeight() / 10);
         }
         System.out.println("Статус Пушка: " + pushok.getStatus());
 
         // Замяукать Мушку до смерти
-        while (mushka.getStatus() != "Dead") {
+        while (!Objects.equals(mushka.getStatus(), "Dead")) {
             mushka.meow();
         }
         System.out.println("Статус Мушки: " + mushka.getStatus());
