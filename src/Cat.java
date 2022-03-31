@@ -3,8 +3,9 @@ public class Cat {
     private double originWeight;
     private double weight;
 
-    private double minWeight;
-    private double maxWeight;
+    private static final int EYES_QUANTITY = 2; // Константа "Количество глаз"
+    private static final double MIN_WEIGHT = 1000.0; // Константа "Минимальный вес"
+    private static final double MAX_WEIGHT = 9000.0; // Константа "Максимальный вес"
     public static int count; // Статическая переменная для подсчёта количества кошек
 
     public double feedCount; // Объявляем переменную для расчета съеденной пищи
@@ -12,19 +13,17 @@ public class Cat {
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         feedCount = 0.0; //
         count++; // при создании каждой новой кошки количнество увеличивается на 1 кошку
 
     }
 
     public void meow() {
-        if (weight < minWeight || weight > maxWeight) {
+        if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
             System.out.println("Кошка мертва и не может мяукать");
         } else {
             weight = weight - 1000;
-            if (weight < minWeight) {
+            if (weight < MIN_WEIGHT) {
                 count--;
             }
             System.out.println("Meow");
@@ -32,24 +31,24 @@ public class Cat {
     }
 
     public void feed(Double amount) {
-        if (weight < minWeight || weight > maxWeight) {
+        if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
             System.out.println("Кошка мертва и не может есть");
         } else {
             weight = weight + amount;
             feedCount = feedCount + amount;
             System.out.println("Ням-Ням!");
-            if (weight > maxWeight) {
+            if (weight > MAX_WEIGHT) {
                 count--;
             }
         }
     }
 
     public void drink(Double amount) {
-        if (weight < minWeight || weight > maxWeight) {
+        if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
             System.out.println("Кошка мертва и не может пить");
         } else {
             weight = weight + amount;
-            if (weight > maxWeight) {
+            if (weight > MAX_WEIGHT) {
                 count--;
             }
         }
@@ -61,9 +60,9 @@ public class Cat {
 
     public String getStatus()
     {
-        if(weight < minWeight) {
+        if (weight < MIN_WEIGHT) {
             return "Dead";
-        } else if (weight > maxWeight) {
+        } else if (weight > MAX_WEIGHT) {
             return "Exploded";
         } else if (weight > originWeight) {
             return "Sleeping";
@@ -79,11 +78,11 @@ public class Cat {
 
     // Вводим метод "Сходить в туалет"
     public void pee() {
-        if (weight < minWeight || weight > maxWeight) {
+        if (weight < MIN_WEIGHT || weight > MAX_WEIGHT) {
             System.out.println("Кошка мертва и не может сходить в туалет");
         } else {
             weight = weight - getWeight() / 100;
-            if (weight < minWeight) {
+            if (weight < MIN_WEIGHT) {
                 count--;
             }
             System.out.println("Упс! А что это произошло?");
