@@ -25,6 +25,7 @@ public class Cat
     public void feed(Double amount)
     {
         weight = weight + amount;
+        System.out.println("Ням-Ням!");
     }
 
     public void drink(Double amount)

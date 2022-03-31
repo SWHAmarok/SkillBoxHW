@@ -29,13 +29,13 @@ public class Loader
         while (!pushok.getStatus().equals("Exploded")) {
             pushok.feed(pushok.getWeight() / 10);
         }
-        System.out.println("Статус Пушка: " + pushok.getStatus());
+        System.out.println("Статус Пушка: " + pushok.getStatus() + "\nПушок взорвался!");
 
         // Замяукать Мушку до смерти
-        while (!Objects.equals(mushka.getStatus(), "Dead")) {
+        while (!mushka.getStatus().equals("Dead")) {
             mushka.meow();
         }
-        System.out.println("Статус Мушки: " + mushka.getStatus());
+        System.out.println("Статус Мушки: " + mushka.getStatus() + "\nМушка умерла!");
 
         // Проверим метод drink
 
