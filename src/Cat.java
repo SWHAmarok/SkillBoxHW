@@ -1,14 +1,14 @@
 
-public class Cat
-{
+public class Cat {
     private double originWeight;
     private double weight;
 
     private double minWeight;
     private double maxWeight;
 
-    public Cat()
-    {
+    public double feedCount; // Объявляем переменную для расчета съеденной пищи
+
+    public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
         originWeight = weight;
         minWeight = 1000.0;
@@ -25,16 +25,17 @@ public class Cat
     public void feed(Double amount)
     {
         weight = weight + amount;
+        feedCount = amount;
         System.out.println("Ням-Ням!");
     }
 
     public void drink(Double amount)
+
     {
         weight = weight + amount;
     }
 
-    public Double getWeight()
-    {
+    public Double getWeight() {
         return weight;
     }
 
@@ -42,15 +43,23 @@ public class Cat
     {
         if(weight < minWeight) {
             return "Dead";
-        }
-        else if(weight > maxWeight) {
+        } else if (weight > maxWeight) {
             return "Exploded";
-        }
-        else if(weight > originWeight) {
+        } else if (weight > originWeight) {
             return "Sleeping";
-        }
-        else {
+        } else {
             return "Playing";
         }
+    }
+
+    // Вводим метод для расчёта съеденной еды
+    public double feedCount() {
+        return feedCount;
+    }
+
+    // Вводим метод "Сходить в туалет"
+    public void pee() {
+        weight = weight - getWeight() / 100;
+        System.out.println("Упс! А что это произошло?");
     }
 }

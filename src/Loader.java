@@ -41,5 +41,15 @@ public class Loader
 
         ryzhik.drink(50.0);
         System.out.println("Рыжик попил и теперь весит " + ryzhik.getWeight() + " граммов.");
+
+        vaska.feed(150.0);
+        System.out.println("Вес Васьки стал " + vaska.getWeight());
+        vaska.feedCount();
+        System.out.println("Вес съеденной Васькой пищи " + vaska.feedCount + " граммов.");
+
+        murka.pee();
+        System.out.println("Вес Мурки стал: " + murka.getWeight());
+        murka.getStatus();
+
     }
 }
