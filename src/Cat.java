@@ -13,6 +13,7 @@ public class Cat {
         originWeight = weight;
         minWeight = 1000.0;
         maxWeight = 9000.0;
+        feedCount = 0.0;
 
     }
 
@@ -25,7 +26,7 @@ public class Cat {
     public void feed(Double amount)
     {
         weight = weight + amount;
-        feedCount = amount;
+        feedCount = feedCount + amount;
         System.out.println("Ням-Ням!");
     }
 
