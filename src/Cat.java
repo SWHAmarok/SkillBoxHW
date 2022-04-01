@@ -15,7 +15,7 @@ public class Cat {
         originWeight = weight;
         minWeight = MIN_WEIGHT;
         maxWeight = MAX_WEIGHT;
-        feedWeight = 0.0 // новосозданный кот пока ничего не ел
+        feedWeight = 0.0; // новосозданный кот пока ничего не ел
         count++; // новосозданный кот увеличивает на 1 общее количество кошек
     }
 
@@ -26,7 +26,7 @@ public class Cat {
         maxWeight = MIN_WEIGHT;
         maxWeight = MAX_WEIGHT;
         feedWeight = 0.0;
-        count++
+        count++;
     }
 
     public void meow() {
