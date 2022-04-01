@@ -3,9 +3,9 @@ public class Cat {
     private double originWeight;
     private double weight;
 
-    private static final int EYES_QUANTITY = 2; // Константа "Количество глаз"
-    private static final double MIN_WEIGHT = 1000.0; // Константа "Минимальный вес"
-    private static final double MAX_WEIGHT = 9000.0; // Константа "Максимальный вес"
+    public static final int EYES_QUANTITY = 2; // Константа "Количество глаз"
+    public static final double MIN_WEIGHT = 1000.0; // Константа "Минимальный вес"
+    public static final double MAX_WEIGHT = 9000.0; // Константа "Максимальный вес"
     public static int count; // Статическая переменная для подсчёта количества кошек
 
     public double feedCount; // Объявляем переменную для расчета съеденной пищи
