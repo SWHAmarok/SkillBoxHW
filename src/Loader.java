@@ -59,6 +59,8 @@ public class Loader {
         Cat kitty = new Cat();
         System.out.println("Вес Китти: " + kitty.getWeight() + " граммов");
         System.out.println("Общее количество увеличилось до " + Cat.getCount() + " живых кошек.");
+        kitty.setCatColor(Color.BLACK);
+        System.out.println("Окраска Китти: " + kitty.getCatColor());
 
         Cat busya = getKitten();
         System.out.println("Вес Буси: " + busya.getWeight() + " граммов");

@@ -1,4 +1,3 @@
-
 public class Cat {
     public static final int EYES_COUNT = 2; // константа количества глаз у кошки
     public static final double MIN_WEIGHT = 1000.0; // константа минимальный вес кошки
@@ -9,6 +8,7 @@ public class Cat {
     private double maxWeight;
     private double feedWeight; // задаём переменную для подсчёта изменения веса кота
     public static int count; // задаём переменную для количества кошек
+    private Color catColor; // задаём переменную цвета кошки
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -103,5 +103,16 @@ public class Cat {
     public static int getCount() // метод, возвращающий количество котов
     {
         return count;
+    }
+
+    public void setCatColor(Color catColor) // сеттер окраса кошки
+
+    {
+        this.catColor = catColor;
+    }
+
+    public Color getCatColor() // геттер окраса кошки
+    {
+        return catColor;
     }
 }
